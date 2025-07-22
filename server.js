@@ -19,6 +19,10 @@ connectDB();
 app.use('/api/users', userRoutes);
 app.use('/api/claims', claimRoutes);
 
+app.get('/', (req, res) => {
+  res.send('Leaderboard backend is running 🚀');
+});
+
  
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
